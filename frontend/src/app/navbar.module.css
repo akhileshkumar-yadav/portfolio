@@ -1,0 +1,19 @@
+.home {
+    text-decoration: none;
+    /* border-bottom: 2px solid white; */
+    transition: border-bottom 0.3s;
+    padding: 5px 15px;
+
+    border-radius: 10px;
+    text-shadow: white 0px 0px 8px;
+}
+
+.home:hover {
+    border-bottom: 2px solid rgb(232, 220, 220);
+    background: #191c2d;
+    
+}
+
+.my{
+    text-shadow: white 0px 0px 8px;
+}

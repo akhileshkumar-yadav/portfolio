@@ -1,0 +1,225 @@
+
+.technicalbars .bar .progresslinehtml{
+    position: relative;
+    border-radius: 10px;
+    width: 65%;
+    height: 6px;
+    background-color: rgb(7, 7, 7);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+
+}
+.bar{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+}
+
+@keyframes animate {
+    100%{
+        transform: scaleX(1);
+    }
+}
+.technicalbars .bar .progresslinehtml span{
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.progresslinehtml.html span{
+            width: 90%;
+}
+.progresslinehtml.css span{
+            width: 80%;
+}
+.progresslinehtml.js span{
+            width: 70%;
+}
+.progresslinehtml.nextjs span{
+            width: 80%;
+}
+.progresslinehtml.expressjs span{
+            width: 60%;
+}
+.progresslinehtml.mongoDB span{
+            width: 55%;
+}
+
+.progresslinehtml span::after{
+    position: absolute;
+    padding: 1px 8px;
+    background-color: black;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right:-20px;
+    animation: showText 0.8s 1.5s linear forwards;
+    opacity: 0;
+
+}
+
+.progresslinehtml.html span::after{
+    content: "90%";
+}
+.progresslinehtml.css span::after{
+    content: "80%";
+}
+.progresslinehtml.js span::after{
+    content: "70%";
+}
+.progresslinehtml.nextjs span::after{
+    content: "80%";
+}
+.progresslinehtml.expressjs span::after{
+    content: "60%";
+}
+.progresslinehtml.mongoDB span::after{
+    content:" 55%";
+}
+
+.progresslinehtml span::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-top-width: 0px;
+    border-top-color: #000;
+    top:-10px;
+    right: 0;
+    animation: showText 0.8s 1.5s linear forwards;
+    opacity: 0;
+}
+
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+
+.bar:first-child{
+    margin-top: 10px;
+}
+
+.bar:last-child{
+    margin-bottom: 10px;
+}
+
+
+.radialbars{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* gap: 5px; */
+    align-items: flex-start;
+}
+.radialbars .radialbar{
+    width:50% ;
+    height: 160px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.radialbars .radialbar svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+
+.radialbars .radialbar .progressbar{
+    stroke-width: 10;
+    stroke: rgb(9, 9, 9);
+    fill:transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards ;
+}
+
+@keyframes animate-bar{
+    100%{
+        stroke-dashoffset: -1;
+    }
+}
+.path{
+    stroke-width: 10;
+    stroke: #0ef;
+    stroke-dasharray: 502;
+    fill: transparent;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+
+}
+
+.path1{animation: animate-path1 1s 1s linear forwards;}
+.path2{animation: animate-path2 1s 1s linear forwards;}
+.path3{animation: animate-path3 1s 1s linear forwards;}
+.path4{animation: animate-path4 1s 1s linear forwards;}
+
+@keyframes animate-path1{
+      100%{
+        stroke-dashoffset: 50;
+      }
+}
+@keyframes animate-path2{
+      100%{
+        stroke-dashoffset: 175;
+      }
+}
+@keyframes animate-path3{
+      100%{
+        stroke-dashoffset: 125;
+      }
+}
+@keyframes animate-path4{
+      100%{
+        stroke-dashoffset: 75;
+      }
+}
+
+
+.radialbar .persentage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.radialbar .text{
+    width: 90%;
+    position: absolute;
+    text-align: center;
+    left: 30%;
+    bottom: -5px;
+    transform: translate(-50px);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
