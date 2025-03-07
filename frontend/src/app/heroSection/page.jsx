@@ -33,8 +33,8 @@ const HeroSection = () => {
 
   })
   return (
-    <div className=" flex items-center h-[100vh]  justify-center text-white relative">
-      <div className='flex items-center h-[100%] justify-around'>
+    <div className=" flex  h-[100vh]  justify-center text-white relative">
+      <div className='flex mt-15 h-[100%] justify-around'>
         <div className={classes.hero}>
           <h2 style={{ textShadow: "white 0px 0px 8px" }} className='hero text-2xl font-semibold' id='a'>Hello , It's Me</h2>
           <h1 style={{ textShadow: "white 0px 0px 8px" }} className='hero  text-6xl font-semibold mt-3 ' id='b'>Akhilesh Kumar</h1>
@@ -74,7 +74,7 @@ const HeroSection = () => {
         </div>
         <div id='img1'>
         <div className={classes.img}>
-          <img className='h-[450px] w-[450px] z-11 rounded-[50%] overflow-hidden ' src="https://media.istockphoto.com/id/2114295998/photo/asian-and-indian-developer-devops-team-discussion-about-coding-promgram-with-software.webp?a=1&b=1&s=612x612&w=0&k=20&c=qNgHSOfUKy-jPjzg9JmtQ0_fuKw2TvGC02gRSsJpGEc=" alt="image" />
+          <img className='h-[450px] w-[450px] z-11 rounded-[50%] overflow-hidden ' src="\ay.jpeg" alt="image" />
         </div>
         </div>
       </div>

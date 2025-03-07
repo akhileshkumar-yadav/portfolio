@@ -14,25 +14,26 @@ const navbar = () => {
                 
         //    })
            let tl = gsap.timeline();
-           tl.from("#p",{duration:1.5,y:50,opacity:0})
-           tl.from("#home",{duration:1,y:30,opacity:0})
-           tl.from("#about",{duration:1,y:30,opacity:0})
-           tl.from("#project",{duration:1,y:30,opacity:0})
-           tl.from("#contact",{duration:1,y:30,opacity:0})
+           tl.from("#p",{duration:1,y:50,opacity:0})
+           tl.from("#home",{duration:0.5,y:30,opacity:0})
+           tl.from("#about",{duration:0.4,y:30,opacity:0})
+           tl.from("#project",{duration:0.4,y:30,opacity:0})
+           tl.from("#contact",{duration:0.4,y:30,opacity:0})
     })
     const [isOpen, setIsOpen] = useState(false);
     return (
         <div className=''>
             <nav className="navbar bg-transparent text-white navbar-expand-lg navbar-light  bg-light">
                 <div className='flex justify-around text-xl h-[70px] w-full font-semibold items-center'>
-                    <div id='p' className='text-2xl  font-semibold'>
+                    <div id='p' className='text-3xl  font-semibold'>
                         <Link href="/" className={classess.my} >My portfolio</Link>
                     </div>
                     <div className='hidden md:flex justify-end space-x-7 items-center w-[50%]'>
                         <Link className={classess.home} id='home'  href={"/"}>Home</Link>
-                        <Link className={classess.home} id='about' href={"/"}>About</Link>
-                        <Link className={classess.home} id='project' href={"/"}>Project</Link>
-                        <Link className={classess.home} id='contact' href={"/"}>Contact</Link>
+                        <Link className={classess.home} id='about' href={"/about"}>About</Link>
+                        <Link className={classess.home} id='project' href={"/latestProject"}>Project</Link>
+                        <Link className={classess.home} id='project' href={"/skill"}>Skill</Link>
+                        <Link className={classess.home} id='contact' href={"/contact"}>Contact</Link>
 
                     </div>
 

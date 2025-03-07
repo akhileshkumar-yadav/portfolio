@@ -18,15 +18,15 @@ const About = () => {
 
  
   return (
-    <div className='flex h-[100vh] justify-between items-center  md:m-10'>
+    <div className='flex h-[90vh] justify-between mt-15  md:m-10'>
         
         <div id='img2' className=' ml-15'>
         <div className={classes.img}>
-          <img className='h-[450px] w-[450px] z-11 rounded-[50%] overflow-hidden ' src="https://media.istockphoto.com/id/2114295998/photo/asian-and-indian-developer-devops-team-discussion-about-coding-promgram-with-software.webp?a=1&b=1&s=612x612&w=0&k=20&c=qNgHSOfUKy-jPjzg9JmtQ0_fuKw2TvGC02gRSsJpGEc=" alt="image" />
+          <img className='h-[450px] w-[450px] z-11 rounded-[50%] overflow-hidden ' src="\ay.jpeg" alt="image" />
         </div>
         </div>
-        <div id='btn2' style={{ textShadow: "white 0px 0px 8px" }} className='text-white w-[40%] mr-30 mt-15'>
-            <h1 className='text-4xl font-semibold '>About Me</h1>
+        <div id='btn2' style={{ textShadow: "white 0px 0px 8px" }} className='text-white w-[40%] mr-30 mt-5'>
+            <h1 className='text-4xl font-semibold mb-10 '>About Me</h1>
             <h2 className='text-xl font-semibold mt-3'>Full stack Developer</h2>
             <p className='mt-4'>I am a Full-Stack Developer (Fresher) skilled in React, Next.js, Node.js, MongoDB, and UI/UX design, with a strong foundation in HTML, CSS, and JavaScript. I have worked on major projects like TopFive and EduGuru, showcasing my ability to build real-world applications. My expertise includes API development and integrations, and I am continuously improving my backend skills. I focus on writing clean, maintainable, and efficient code while ensuring a great user experience. Always eager to learn, I stay updated with the latest technologies to grow as a professional developer.</p>
             <div  className='h-[45px] flex justify-center rounded-4xl items-center mt-10 w-[160px] bg-gradient-to-r from-[#4fbcd7] to-[#db4bb2d2]'>
