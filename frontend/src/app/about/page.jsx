@@ -14,11 +14,25 @@ const About = () => {
         //    })
         gsap.from("#img2",{ duration: 1.5, y: 500, opacity: 0})
         gsap.from("#btn2",{ duration: 1.5, y: 500,opacity:0})
+
+        gsap.from("#about",{
+          duration: 1,
+          y:500,
+          opacity:0,
+          ease: "power2.inOut",
+          scrollTrigger:{
+            trigger:"#about",
+            start:"top 50%",
+            // end:"bottom 80%",
+            scroller:"body",
+            markers:true
+          }
+         })
       })
 
  
   return (
-    <div className='flex h-[90vh] justify-between mt-15  md:m-10'>
+    <div id='about' className='about flex h-[90vh] justify-between mt-15  md:m-10'>
         
         <div id='img2' className=' ml-15'>
         <div className={classes.img}>

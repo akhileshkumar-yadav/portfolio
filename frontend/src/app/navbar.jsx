@@ -26,7 +26,7 @@ const navbar = () => {
             <nav className="navbar bg-transparent text-white navbar-expand-lg navbar-light  bg-light">
                 <div className='flex justify-around text-xl h-[70px] w-full font-semibold items-center'>
                     <div id='p' className='text-3xl  font-semibold'>
-                        <Link href="/" className={classess.my} >My portfolio</Link>
+                        <Link href="/" className={classess.my} >Akhilesh kumar</Link>
                     </div>
                     <div className='hidden md:flex justify-end space-x-7 items-center w-[50%]'>
                         <Link className={classess.home} id='home'  href={"/"}>Home</Link>

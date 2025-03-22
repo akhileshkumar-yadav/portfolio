@@ -6,8 +6,13 @@ import MyServices from './myservices/page'
 import Skill from './skill/page'
 import LatestProject from "./latestProject/page"
 import Contact  from './contact/page'
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 const page = () => {
+  useGSAP(() => {
+       
+  })
   return (
       <>
       <HeroSection />

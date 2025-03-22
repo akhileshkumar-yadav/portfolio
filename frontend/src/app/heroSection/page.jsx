@@ -33,8 +33,8 @@ const HeroSection = () => {
 
   })
   return (
-    <div className=" flex  h-[100vh]  justify-center text-white relative">
-      <div className='flex mt-15 h-[100%] justify-around'>
+    <div className=" md:flex items-center justify-center md:h-screen text-white p-6 md:p-12 ">
+      <div className=' flex text-center ml-10   md:text-left'>
         <div className={classes.hero}>
           <h2 style={{ textShadow: "white 0px 0px 8px" }} className='hero text-2xl font-semibold' id='a'>Hello , It's Me</h2>
           <h1 style={{ textShadow: "white 0px 0px 8px" }} className='hero  text-6xl font-semibold mt-3 ' id='b'>Akhilesh Kumar</h1>
@@ -72,7 +72,7 @@ const HeroSection = () => {
             <button className='text-md font-semibold bg-[#242d5c] hover:text-blue-500 rounded-4xl py-1 px-4'>More About Me</button>
           </div>
         </div>
-        <div id='img1'>
+        <div id='img1' className='md:ml-72  '>
         <div className={classes.img}>
           <img className='h-[450px] w-[450px] z-11 rounded-[50%] overflow-hidden ' src="\ay.jpeg" alt="image" />
         </div>

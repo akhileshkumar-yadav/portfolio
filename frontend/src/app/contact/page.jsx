@@ -1,9 +1,49 @@
 'use client'
-import React from 'react'
-import { FaEnvelope, FaPhone, FaUser, FaRegEdit,FaEnvelopeOpenText } from "react-icons/fa";
+import { useState } from 'react';
+import { FaEnvelope, FaPhone, FaUser, FaRegEdit, FaEnvelopeOpenText } from "react-icons/fa";
 import { Linkedin, Github, Instagram, Facebook } from "lucide-react";
 import classess from "./contact.module.css"
 const Contact = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: ''
+    });
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+    
+        console.log('📤 Sending Data:', formData);
+    
+        try {
+            const response = await fetch('http://192.168.43.206:5000/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
+    
+            const result = await response.json();
+            console.log('📥 Server Response:', result);
+    
+            if (response.ok) {
+                alert('✅ Message sent successfully!');
+                setFormData({ name: '', email: '', phone: '', subject: '', message: '' }); // Reset form
+            } else {
+                alert(`❌ Error: ${result.message || 'Failed to send message'}`);
+            }
+        } catch (error) {
+            console.error('❌ Network Error:', error);
+            alert('❌ Network error or server issue. Please try again.');
+        }
+    };
+    
+    
     return (
         <div style={{ textShadow: "white 0px 0px 8px" }} className='flex w-full h-[90vh] text-white justify-start '>
             <div className='w-[40%] md:ml-[10%] mt-15'>
@@ -32,33 +72,70 @@ const Contact = () => {
             </div>
             <div className='relative w-[30%] mt-20 ml-26'>
                 <div className={classess.div1}>
-                    <form className='z-10  absolute top-2 left-5 w-[90%]' action="">
+                    <form onSubmit={handleSubmit} className='z-10  absolute top-2 left-5 w-[90%]' action="">
                         <div className='flex justify-center items-center'>
-                    <FaEnvelopeOpenText className="text-blue-600 mt-3 " size={40} />
-                    </div>
+                            <FaEnvelopeOpenText className="text-blue-600 mt-3 " size={40} />
+                        </div>
                         <div className='flex items-center border-b w-[90%] ml-5 mt-5 '>
                             <FaUser className="text-red-500 " size={15} />
-                            <input type="text" placeholder='Enter Your Name' className='block ml-2 outline-none' />
+                            <input
+                                type="text"
+                                name='name'
+                                value={formData.name}
+                                onChange={handleChange}
+                                placeholder='Enter Your Name'
+                                className='block ml-2 outline-none'
+                                required />
                         </div>
                         <div className='flex items-center border-b w-[90%] ml-5 mt-5  '>
                             <FaEnvelope className=" text-blue-500  " size={15} />
-                            <input type="email" placeholder='Enter Your Email' className=' block ml-2 outline-none' />
+                            <input
+                                type="email"
+                                name='email'
+                                value={formData.email}
+                                onChange={handleChange}
+                                placeholder='Enter Your Email'
+                                className=' block ml-2 outline-none'
+                                required />
                         </div>
                         <div className='flex items-center border-b w-[90%] ml-5 mt-5 '>
                             <FaPhone className=" text-green-500  mr-1" size={15} />
                             <h1 className='text-gray-500 hover:text-white '>+91</h1>
-                            <input type="tel" placeholder='Enter Phone No.' pattern="[0-9]{10}"
-                                maxLength="10" className='block ml-2 outline-none' />
+                            <input
+                                type="tel"
+                                name='phone'
+                                value={formData.phone}
+                                onChange={handleChange}
+                                placeholder='Enter Phone No.'
+                                pattern="[0-9]{10}"
+                                maxLength="10"
+                                className='block ml-2 outline-none' />
                         </div>
                         <div className='flex items-center border-b w-[90%] ml-5 mt-5  '>
                             <FaRegEdit className=" text-green-500  " size={15} />
-                            <input type="text" placeholder='Enter Your Subject' className='block ml-2 outline-none' />
+                            <input
+                                type="text"
+                                name="subject"
+                                value={formData.subject}
+                                onChange={handleChange}
+                                placeholder='Enter Your Subject'
+                                className='block ml-2 outline-none' />
                         </div>
                         <div className='flex items-center border-b w-[90%] ml-5 mt-5  '>
                             {/* <FaRegEdit className=" text-green-500  " size={15} /> */}
-                            <textarea className='w-[100%] outline-none' maxLength={'5'} rows={3} name="" id=""   placeholder='Enter Your Message'></textarea>
+                            <textarea
+                                className='w-[100%] outline-none'
+                                maxLength={'5'}
+                                rows={3}
+                                name="message" id="message"
+                                value={formData.message}
+                                onChange={handleChange}
+                                placeholder='Enter Your Message'
+                                required >
+
+                            </textarea>
                         </div>
-                         <button type='submit' className='w-[90%] ml-5 mt-5 p-1 rounded-2xl bg-orange-400'> Submit</button>
+                        <button type='submit' className='w-[90%] ml-5 mt-5 p-1 rounded-2xl bg-orange-400'> Submit</button>
                     </form>
                 </div>
             </div>
