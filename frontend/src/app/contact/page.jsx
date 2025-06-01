@@ -92,7 +92,7 @@ const Contact = () => {
           <div className={classess.Linkedin} id='Instagram'><Facebook className="hover:text-blue-500 transition-all duration-300 z-10  p-1  w-[30px] h-[30px]" /></div>
         </div>
       </div>
-      <div className='relative w-[90%] lg:w-[30%] lg:mt-20 mt-8 lg:ml-26 mr-2'>
+      <div className='relative w-[90%] lg:w-[30%] lg:mt-20 mt-8 lg:ml-26 ml-2'>
         <div className={classess.div1}>
           <form
             onSubmit={handleSubmit}

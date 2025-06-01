@@ -36,7 +36,7 @@ const LatestProject = () => {
       >
         Latest Project
       </h1>
-      <div className="md:flex flex-wrap justify-center items-center space-x-11 p-6">
+      <div className="md:flex mr-3 md:mr-1 flex-wrap justify-center items-center space-x-11 p-6">
         {/* FIRST CARD */}
         <div
           className="project-card lg:w-[430px] w-[350px] ml-5 lg:ml-1 lg:h-[320px] h-[290px] rounded-lg flex flex-col justify-center items-center relative overflow-hidden mb-5 lg:mb-0"
