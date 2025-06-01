@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import { Linkedin, Github, Instagram } from "lucide-react";
 import { TypeAnimation } from "react-type-animation";
 import classes from "./hero.module.css";
+import Link from 'next/link';
 
 const HeroSection = () => {
   const heroRef = useRef(null);
@@ -59,15 +60,15 @@ const HeroSection = () => {
             I’m a MERN Full Stack Developer, skilled in React, Node.js, Express, and MongoDB, building scalable and dynamic web applications.
           </p>
           <div className="flex space-x-5 mt-4 justify-start">
-            <div id="Linkedin" className={classes.Linkedin}>
+            <Link href="https://www.linkedin.com/in/akhilesh-kumar2226/"><div id="Linkedin" className={classes.Linkedin}>
               <Linkedin className="hover:text-blue-500 z-10 transition-all duration-300 w-6 md:w-8 h-6 md:h-8" />
-            </div>
-            <div id="Github" className={classes.Linkedin}>
+            </div></Link>
+            <Link href="https://github.com/akhileshkumar-yadav"><div id="Github" className={classes.Linkedin}>
               <Github className="hover:text-blue-500 z-10 transition-all duration-300 w-6 md:w-8 h-6 md:h-8" />
-            </div>
-            <div id="Instagram" className={classes.Linkedin}>
-              <Instagram className="hover:text-blue-500 transition-all duration-300 w-6 md:w-8 h-6 md:h-8 z-10" />
-            </div>
+            </div></Link>
+            <Link href="https://www.instagram.com/akhileshkumar0796?igsh=MWM2Mjk0NHhwYnd4NQ=="><div id="Instagram" className={classes.Linkedin}>
+             <Instagram className="hover:text-blue-500 transition-all duration-300 w-6 md:w-8 h-6 md:h-8 z-10" />
+            </div></Link>
           </div>
           <div id="btn" className="h-[45px] flex justify-center rounded-4xl items-center mt-10 w-[160px] bg-gradient-to-r from-[#72d4ec] to-[#f25fc8d2]">
             <button className="text-md font-semibold bg-[#242d5c] hover:text-blue-500 rounded-2xl py-1 px-4">More About Me</button>

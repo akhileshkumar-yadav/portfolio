@@ -5,6 +5,7 @@ import { Linkedin, Github, Instagram, Facebook } from "lucide-react";
 import classess from "./contact.module.css";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import Link from 'next/link';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -86,13 +87,13 @@ const Contact = () => {
           <h1 className='ml-2 hover:text-green-600'>+91 8173970887</h1>
         </div>
         <div className='flex space-x-5 mt-15'>
-          <div className={classess.Linkedin} id='Linkedin'><Linkedin className="hover:text-blue-500 transition-all duration-300 z-10  p-1  w-[30px] h-[30px] " /></div>
-          <div className={classess.Linkedin} id='Github'><Github className="hover:text-blue-500 transition-all duration-300 z-10  p-1  w-[30px] h-[30px]" /></div>
-          <div className={classess.Linkedin} id='Instagram'><Instagram className="hover:text-blue-500 transition-all duration-300 z-10  p-1  w-[30px] h-[30px]" /></div>
-          <div className={classess.Linkedin} id='Instagram'><Facebook className="hover:text-blue-500 transition-all duration-300 z-10  p-1  w-[30px] h-[30px]" /></div>
+          <Link href="https://www.linkedin.com/in/akhilesh-kumar2226/"><div className={classess.Linkedin} id='Linkedin'> <Linkedin className="hover:text-blue-500 transition-all duration-300 z-10  p-1  w-[30px] h-[30px] " /></div></Link>
+          <Link href="https://github.com/akhileshkumar-yadav"><div className={classess.Linkedin} id='Github'><Github className="hover:text-blue-500 transition-all duration-300 z-10  p-1  w-[30px] h-[30px]" /></div></Link>
+          <Link href="https://www.instagram.com/akhileshkumar0796?igsh=MWM2Mjk0NHhwYnd4NQ=="><div className={classess.Linkedin} id='Instagram'><Instagram className="hover:text-blue-500 transition-all duration-300 z-10  p-1  w-[30px] h-[30px]" /></div></Link>
+          <Link href="https://www.facebook.com/share/1AzR918LJJ/"><div className={classess.Linkedin} id='Instagram'><Facebook className="hover:text-blue-500 transition-all duration-300 z-10  p-1  w-[30px] h-[30px]"/></div></Link>
         </div>
       </div>
-      <div className='relative w-[90%] lg:w-[30%] lg:mt-20 mt-8 lg:ml-26 ml-2'>
+      <div className='relative w-[90%] lg:w-[30%] lg:mt-20 mt-8 lg:ml-26 ml-4 mb-3'>
         <div className={classess.div1}>
           <form
             onSubmit={handleSubmit}
