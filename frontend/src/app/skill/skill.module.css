@@ -113,21 +113,24 @@
 }
 
 
-.radialbars{
-    width: 70%;
+.radialbars {
+    width: 90%; /* Mobile-friendly width */
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    /* gap: 5px; */
+    justify-content: center; /* Center items on smaller screens */
+    gap: 10px;
     align-items: flex-start;
 }
-.radialbars .radialbar{
-    width:50% ;
+
+.radialbars .radialbar {
+    width: 100%; /* Default: Full width for small screens */
+    max-width: 160px; /* Limit size on larger screens */
     height: 160px;
     margin-bottom: 10px;
     position: relative;
 }
 
+/* Center the SVG properly */
 .radialbars .radialbar svg {
     position: absolute;
     top: 50%;
@@ -136,6 +139,28 @@
     width: 120px;
     height: 160px;
 }
+
+/* Tablet View (600px - 900px) */
+@media (min-width: 600px) {
+    .radialbars {
+        justify-content: space-around;
+    }
+    .radialbars .radialbar {
+        width: 50%; /* Two columns */
+    }
+}
+
+/* Desktop View (Above 900px) */
+@media (min-width: 900px) {
+    .radialbars {
+        width: 70%;
+        justify-content: space-between;
+    }
+    .radialbars .radialbar {
+        width: 50%; /* Restore original design */
+    }
+}
+
 
 .radialbars .radialbar .progressbar{
     stroke-width: 10;
@@ -162,10 +187,23 @@
 
 }
 
-.path1{animation: animate-path1 1s 1s linear forwards;}
-.path2{animation: animate-path2 1s 1s linear forwards;}
-.path3{animation: animate-path3 1s 1s linear forwards;}
-.path4{animation: animate-path4 1s 1s linear forwards;}
+.path1{
+    animation: animate-path1 1s 1s linear forwards;
+    stroke: rgb(85, 164, 25); 
+}
+.path2{
+    animation: animate-path2 1s 1s linear forwards;
+    stroke: rgb(255, 0, 0);
+}
+.path3{
+    animation: animate-path3 1s 1s linear forwards;
+    stroke: rgb(117, 34, 158);
+}
+.path4{
+    animation: animate-path4 1s 1s linear forwards;
+    stroke: rgb(0, 255, 255);
+}
+
 
 @keyframes animate-path1{
       100%{

@@ -24,13 +24,13 @@ const Skill = () => {
 
   })
   return (
-    <div className='text-white h-[100vh]' style={{ textShadow: "#e8da13 2px 4px 13px" }}>
-      <div id='skill' className='flex justify-center w-full text-4xl underline mt-10 font-semibold'><h1 className='   inline-block'style={{ textShadow: "#e8da13 2px 4px 13px" }}>My </h1> &nbsp; <h2 className='inline-block' style={{ textShadow: "#e813af 2px 4px 13px" }}> Skills</h2>
+    <div className='text-white lg:h-[100vh]' style={{ textShadow: "#e8da13 2px 4px 13px" }}>
+      <div id='skill' className='md:flex justify-center flex-wrap w-full text-4xl ml-8 underline mt-10 font-semibold'><h1 className='   inline-block'style={{ textShadow: "#e8da13 2px 4px 13px" }}>My </h1> &nbsp; <h2 className='inline-block' style={{ textShadow: "#e813af 2px 4px 13px" }}> Skills</h2>
       </div>
-      <div className='flex justify-between items-start space-x-5 mx-10 '>
-        <div id='tech' className='min-w-[40%] ml-20'>
+      <div className='lg:flex w-full justify-between items-start space-x-5 mx-10 '>
+        <div id='tech' className='min-w-[40%] lg:ml-20'>
 
-          <h1 className='text-3xl underline font-semibold mt-10 mb-6 ml-5'>Technical Skills</h1>
+          <h1 className='text-3xl underline font-semibold mt-10 mb-6 ml-2 lg:ml-5'>Technical Skills</h1>
           <div className={classes.technicalbars}>
             <div className={classes.bar}>
               <div className='flex flex-col justify-start items-start w-[100%]'>
@@ -108,8 +108,8 @@ const Skill = () => {
             </div>
           </div>
         </div>
-        <div id='pro' className='w-[60%] ml-[10%]'>
-          <h1  className='text-3xl font-semibold underline mt-10 ml-10 mb-6'>Professional Skill</h1>
+        <div id='pro' className='w-[60%] lg:ml-[10%]'>
+          <h1  className='text-3xl font-semibold underline mt-10 ml-2 lg:ml-10 mb-6'>Professional Skill</h1>
           <div className={classes.radialbars}>
             <div className={classes.radialbar}>
              <svg x="0px" y="0px" viewBox='0 0 200 200'>

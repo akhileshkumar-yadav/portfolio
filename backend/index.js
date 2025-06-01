@@ -1,9 +1,14 @@
 import express from 'express';
 import cors from 'cors';
-import dbConnect from './dbConnect.js';
-import dotenv from 'dotenv';  // ✅ Import dotenv
+import dotenv from 'dotenv';
+import path from 'path';
 
-dotenv.config();  // ✅ Load .env variables
+
+dotenv.config({ path: path.resolve(process.cwd(), '.env') });
+
+console.log("✅ ENV MONGO_URI:", process.env.MONGO_URI);
+
+import dbConnect from './dbConnect.js';
 
 const app = express();
 

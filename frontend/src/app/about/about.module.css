@@ -1,7 +1,7 @@
 .img{
     position: relative;
-    min-height: 500px;
-    min-width: 500px;
+    height: 500px;
+    width: 500px;
     z-index: 10;
     box-shadow: 0 4px 8px 0 rgba(124, 164, 220, 0.2), 0 6px 20px 0 rgba(119, 64, 237, 0.19);
     margin-top: 20px;
@@ -19,8 +19,8 @@
 .img::before{
     content: '';
     position: absolute;
-    min-width: 500px;
-    min-height: 500px;
+    width: 500px;
+    height: 500px;
     /* border: 5px dashed red; */
     background: linear-gradient(#00ccff,#f900b2d2);
     animation: rotate 4s linear infinite ;
@@ -44,4 +44,14 @@
     100%{
         transform: rotate(360deg);
     }
+}
+
+
+@media (max-width: 768px) {
+    
+    .img {
+        width: 260px;
+        height: 260px;
+    
+}
 }
