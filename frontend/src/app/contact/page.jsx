@@ -93,7 +93,7 @@ const Contact = () => {
           <Link href="https://www.facebook.com/share/1AzR918LJJ/"><div className={classess.Linkedin} id='Instagram'><Facebook className="hover:text-blue-500 transition-all duration-300 z-10  p-1  w-[30px] h-[30px]"/></div></Link>
         </div>
       </div>
-      <div className='relative w-[90%] lg:w-[30%] lg:mt-20 mt-8 lg:ml-26 ml-4 mb-3'>
+      <div className='relative w-[90%] lg:w-[30%] lg:mt-20 mt-8 lg:ml-26 ml-4 mb-5 md:mb-1'>
         <div className={classess.div1}>
           <form
             onSubmit={handleSubmit}
@@ -160,7 +160,7 @@ const Contact = () => {
                 required>
               </textarea>
             </div>
-            <button type='submit' className='w-[90%] ml-5 mt-5 p-1 rounded-2xl bg-orange-400'> Submit</button>
+            <button type='submit' className='w-[90%] ml-5 mt-5 p-1 rounded-2xl bg-orange-400 mb-4'> Submit</button>
           </form>
         </div>
       </div>

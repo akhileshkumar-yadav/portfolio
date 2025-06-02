@@ -32,8 +32,8 @@ const About = () => {
   }, []);
 
   return (
-    <div ref={aboutRef} id='about' className='about lg:flex md:h-[90vh] justify-between mt-15  md:m-10'>
-      <div id='img2' className=' md:ml-15 ml-20 mb-3'>
+    <div ref={aboutRef} id='about' className='about lg:flex md:h-[90vh] justify-between mt-15 md:p-1 p-4 md:m-10'>
+      <div id='img2' className=' md:ml-15 ml-16 mb-3'>
         <div className={classes.img}>
           <img className='h-[230px] w-[230px] md:h-[450px] md:w-[450px] z-11 rounded-[50%] overflow-hidden ' src="/ay.jpeg" alt="image" />
         </div>
