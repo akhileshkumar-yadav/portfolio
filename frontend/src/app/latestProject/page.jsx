@@ -39,7 +39,7 @@ const LatestProject = () => {
       <div className="md:flex  flex-wrap justify-center items-center space-x-11 md:p-6 p-5">
         {/* FIRST CARD */}
         <div
-          className="project-card lg:w-[430px] w-[350px] mr-3 md:mr-1 lg:ml-1 lg:h-[320px] h-[290px] rounded-lg flex flex-col justify-center items-center relative overflow-hidden mb-5 lg:mb-0 "
+          className="project-card lg:w-[430px] w-[350px]  md:mr-1 lg:ml-1 lg:h-[320px] h-[290px] rounded-lg flex flex-col justify-center items-center relative overflow-hidden mb-5 lg:mb-0 "
           style={{ boxShadow: "0px 4px 23px rgba(17, 50, 237, 3.1)" }}
         >
           <img className="w-[430px] h-[320px] rounded-lg" src="\mini.png" alt="Mini Project" />
@@ -65,7 +65,7 @@ const LatestProject = () => {
 
         {/* SECOND CARD */}
         <div
-          className="project-card lg:w-[430px] lg:h-[320px] mr-3 md:mr-1 h-[290px] mb-5 lg:mb-0 w-[350px] lg:ml-5  md:ml-0 rounded-lg flex flex-col justify-center items-center relative overflow-hidden"
+          className="project-card lg:w-[430px] lg:h-[320px] md:mr-1 h-[290px] mb-5 lg:mb-0 w-[350px] lg:ml-5  md:ml-0 rounded-lg flex flex-col justify-center items-center relative overflow-hidden"
           style={{ boxShadow: "0px 4px 23px rgba(17, 50, 237, 3.1)" }}
         >
           <img className="w-[430px] h-[320px] rounded-lg" src="\majorProject.png" alt="Major Project" />
